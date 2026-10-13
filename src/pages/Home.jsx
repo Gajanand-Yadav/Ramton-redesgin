@@ -1141,7 +1141,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {[
-  [20, "+", "Years of Experience"],
+  [9, "+", "Years of Experience"],
   [500, "+", "Customers Globally"],
   [1, "K+", "Cybersecurity Projects"],
 
