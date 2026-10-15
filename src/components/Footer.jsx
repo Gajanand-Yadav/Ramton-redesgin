@@ -1,6 +1,15 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/ramton-logo.png";
 
+import {
+  FaInstagram,
+  FaYoutube,
+  FaFacebookF,
+  FaLinkedinIn,
+} from "react-icons/fa";
+
+import { FaXTwitter } from "react-icons/fa6";
+
 const groups = [
   {
     title: "Solutions",
@@ -25,7 +34,7 @@ const groups = [
   {
     title: "Resources",
     links: [
-      { label: "FAQs", to : "/about"},
+      { label: "FAQs", to: "/about" },
       { label: "Privacy Policy", placeholder: true },
       { label: "Terms & Conditions", placeholder: true },
     ],
@@ -52,6 +61,9 @@ function FooterLink({ link }) {
 }
 
 export default function Footer() {
+  const socialLinkClass =
+    "flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 transition-all duration-200 hover:border-[#dc2626] hover:bg-[#dc2626] hover:text-white";
+
   return (
     <footer className="bg-white text-slate-800">
       {/* Warm orange gradient divider */}
@@ -59,6 +71,7 @@ export default function Footer() {
         aria-hidden="true"
         className="h-[2px] w-full bg-gradient-to-r from-[#c2410c] via-[#fed7c3] to-[#c2410c]"
       />
+
       <div className="mx-auto w-full max-w-[1500px] px-6 md:px-8">
         <div className="grid gap-10 py-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-[1.35fr_repeat(3,1fr)_1.25fr] lg:gap-8">
           {/* Brand */}
@@ -77,25 +90,60 @@ export default function Footer() {
             </p>
 
             {/* Social Links */}
-            <div className="mt-6 flex gap-2.5">
+            <div className="mt-6 flex flex-wrap gap-2.5">
+              {/* Instagram */}
               <a
-                href="https://www.linkedin.com/company/ramton-technologies-pvt-ltd/"
+                href="https://www.instagram.com/ramton_technologies_pvt_ltd/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-xs font-bold text-slate-700 transition-all duration-200 hover:border-[#dc2626] hover:bg-[#dc2626] hover:text-white"
+                aria-label="Instagram"
+                className={socialLinkClass}
               >
-                in
+                <FaInstagram size={17} />
               </a>
 
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/@Rtpl2017"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className={socialLinkClass}
+              >
+                <FaYoutube size={17} />
+              </a>
+
+              {/* Twitter (X) */}
+              <a
+                href="https://x.com/RamtonT"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter X"
+                className={socialLinkClass}
+              >
+                <FaXTwitter size={15} />
+              </a>
+
+              {/* Facebook */}
               <a
                 href="https://www.facebook.com/ramton.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-xs font-bold text-slate-700 transition-all duration-200 hover:border-[#dc2626] hover:bg-[#dc2626] hover:text-white"
+                className={socialLinkClass}
               >
-                f
+                <FaFacebookF size={15} />
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/company/ramton-technologies-pvt-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className={socialLinkClass}
+              >
+                <FaLinkedinIn size={15} />
               </a>
             </div>
           </div>
@@ -128,7 +176,7 @@ export default function Footer() {
                   className="relative inline-block transition-colors hover:text-[#dc2626]"
                 >
                   <span aria-hidden="true">☎</span>
-                  <span className="ml-2">+91 11 4567 8900</span>
+                  <span className="ml-2">+91 11 4140 3366</span>
                 </a>
               </li>
 
@@ -145,9 +193,11 @@ export default function Footer() {
               <li className="flex items-start">
                 <span aria-hidden="true">⌖</span>
                 <span className="ml-2">
-                  A-41, Sector 4, Noida,
+                  145B/9, 1st Floor, Kishangarh,
                   <br />
-                  Uttar Pradesh - 201301
+                  Near United Free Church, Vasant Kunj,
+                  <br />
+                  New Delhi, Delhi-110070 India
                 </span>
               </li>
             </ul>
@@ -155,8 +205,23 @@ export default function Footer() {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-slate-200 py-5 text-center text-xs text-slate-600">
-          <p>© 2026 Ramton. All Rights Reserved.</p>
+        <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 border-t border-slate-200 py-5 text-center text-xs text-slate-600">
+          <span>© 2026 Ramton. All Rights Reserved.</span>
+
+          <span aria-hidden="true">|</span>
+
+          <span>
+            Website Developed by{" "}
+            <a
+              href="https://webzoid.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Website developed by Webzoid"
+              className="font-semibold text-slate-700 transition-colors duration-200 hover:text-[#dc2626]"
+            >
+              Webzoid
+            </a>
+          </span>
         </div>
       </div>
     </footer>

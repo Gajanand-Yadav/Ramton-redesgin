@@ -100,14 +100,14 @@ const LOCATIONS = [
     tag: "Head Office",
     address: (
       <>
-        145 B/9, 1st &amp; 3rd Floor, Kishangarh,
+        145 B/9, 1st Floor, Kishangarh,
         <br />
         Near United Free Church, Vasant Kunj,
         <br />
         New Delhi – 110070, India
       </>
     ),
-    maps: "https://www.google.com/maps/search/?api=1&query=145+B%2F9+Kishangarh+Vasant+Kunj+New+Delhi+110070",
+    maps: "https://maps.app.goo.gl/xXbSqf62Af2iWP9f7",
   },
   {
     city: "Mumbai",
@@ -130,12 +130,14 @@ const LOCATIONS = [
     tag: "Branch Office",
     address: (
       <>
-        A-41, Sector 4,
+        1505, Tower-C, The ICONIC Corenthum,  
         <br />
-        Noida, Uttar Pradesh – 201301
+        Plot No. A-41, Sector 62, Noida,
+        <br />
+        Distt- Gautam Budh Nagar, U.P. - 201309
       </>
     ),
-    maps: "https://www.google.com/maps/search/?api=1&query=A-41+Sector+4+Noida+Uttar+Pradesh+201301",
+    maps: "https://www.google.com/maps/place/The+Iconic+Corenthum/@28.6269129,77.3732291,19.37z/data=!4m6!3m5!1s0x390ce5447d350e9f:0x4beba507fa3f455b!8m2!3d28.6267113!4d77.3737679!16s%2Fg%2F11cls77vbf?entry=ttu&g_ep=EgoyMDI2MTAxMi4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
